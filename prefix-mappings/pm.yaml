@@ -1,0 +1,14 @@
+# prefix map for carml-cli
+# rdf,rdfs,owl,sh,dcterms,geo,wgs,gtfs,otd,schema,ch
+
+rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+rdfs: http://www.w3.org/2000/01/rdf-schema#
+owl: http://www.w3.org/2002/07/owl#
+sh: http://www.w3.org/ns/shacl#
+dcterms: http://purl.org/dc/terms/
+geo: http://www.opengis.net/ont/geosparql#
+wgs: http://www.w3.org/2003/01/geo/wgs84_pos#
+gtfs: http://vocab.gtfs.org/terms#
+otd: https://lod.opentransportdata.swiss/vocab/
+schema: http://schema.org/
+ch: https://schema.ld.admin.ch/

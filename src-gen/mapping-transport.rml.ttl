@@ -1,0 +1,52 @@
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX gtfs: <http://vocab.gtfs.org/terms#>
+PREFIX otd: <https://lod.opentransportdata.swiss/vocab/>
+
+<#TransportEdge>
+	a rr:TriplesMap;
+	
+	rml:logicalSource [
+		rml:source "zoning-and-transport.xml";
+		rml:referenceFormulation ql:XPath;
+		rml:iterator "/export/tranport-edges/tranport-edge"
+	];
+	
+	rr:subjectMap [
+		rr:template "https://lod.opentransportdata.swiss/transportedge/{@stop1}/{@stop2}/{@operator}/{@mean-of-transport}/regular";
+		rr:class otd:TransportEdge
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate gtfs:stop;
+		rr:objectMap [
+			rr:template "https://lod.opentransportdata.swiss/didok/{@stop1}"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate gtfs:stop;
+		rr:objectMap [
+			rr:template "https://lod.opentransportdata.swiss/didok/{@stop2}"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate otd:meanOfTransport;
+		rr:objectMap [
+			rml:reference "@mean-of-transport"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate otd:zone;
+		rr:objectMap [
+			rr:parentTriplesMap  <#Zone>;
+			rr:joinCondition [
+				rr:child "zones/zone/@idref";
+				rr:parent "@id";
+			]
+		]
+	].
+	

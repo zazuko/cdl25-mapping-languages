@@ -1,0 +1,133 @@
+source-group zoning {
+	type xml
+	source "zoning-and-transport.xml"
+
+	logical-source alliance {
+		iterator "/export/zoning/alliance"
+
+		referenceables
+			id "@id"
+			name "@name"
+	}
+
+	logical-source zoningplan {
+		iterator "/export/zoning/alliance/zoningplan"
+
+		referenceables
+			zoningplanId "@id"
+			allianceId "../@id"
+			name "@name"
+	}
+
+	logical-source zone {
+		iterator "/export/zoning/alliance/zoningplan/zone"
+
+		referenceables
+			zoneId "@id"
+			zoningplanId "../@id"
+			allianceId "../../@id"
+			name "@name"
+			providerId "provider/@idref"
+	}
+}
+
+source-group transport {
+	type xml
+	source "zoning-and-transport.xml"
+
+	logical-source edge {
+		iterator "/export/tranport-edges/tranport-edge"
+
+		referenceables
+			stop1 "@stop1"
+			stop2 "@stop2"
+			meanOfTransport "@mean-of-transport"
+			operator "@operator"
+			zoneId "zones/zone/@idref"
+	}
+}
+
+source-group stops {
+    type rdb
+    source "stops"
+
+	logical-source stops {
+
+		// Note: We already filter the servicepoints to only have validated stops when loading the CSV into DuckDB
+		//       see load-csv.sql
+
+		referenceables
+			numberShort          // 88391
+			uicCountryCode       // 85
+			sloid                // ch:1:sloid:88391
+			number               // 8588391
+			checkDigit           // 8
+			validFrom            // 2024-10-21
+			validTo              // 9999-12-31
+			designationOfficial  // Langnau i.E., Gerbeplatz
+			designationLong      // 
+			abbreviation         // LNGP
+			operatingPoint       // true
+			operatingPointWithTimetable  // true
+			stopPoint            // true
+			stopPointType        // ORDERLY
+			freightServicePoint  // false
+			trafficPoint         // true
+			borderPoint          // false
+			hasGeolocation       // true
+			isoCountryCode       // CH
+			cantonName           // Bern
+			cantonFsoNumber      // 2
+			cantonAbbreviation   // BE
+			districtName         // Emmental
+			districtFsoNumber    // 245
+			municipalityName     // Langnau im Emmental
+			fsoNumber            // 902
+			localityName         // Langnau im Emmental
+			operatingPointType   // 
+			operatingPointTechnicalTimetableType  // 
+			meansOfTransport     // BUS
+			categories           // 
+			operatingPointTrafficPointType      // 
+			operatingPointRouteNetwork          // false
+			operatingPointKilometer             // false
+			operatingPointKilometerMasterNumber // 
+			sortCodeOfDestinationStation        // 
+			businessOrganisation                // ch:1:sboid:100670
+			businessOrganisationNumber          // 871
+			businessOrganisationAbbreviationDe  // BLAG
+			businessOrganisationAbbreviationFr  // BLAG
+			businessOrganisationAbbreviationIt  // BLAG
+			businessOrganisationAbbreviationEn  // BLAG
+			businessOrganisationDescriptionDe   // Busland AG
+			businessOrganisationDescriptionFr   // Busland AG
+			businessOrganisationDescriptionIt   // Busland AG
+			businessOrganisationDescriptionEn   // Busland AG
+			fotComment    // 
+			lv95East      // 2626754.8754
+			lv95North     // 1198574.66227
+			wgs84East     // 7.79000167582
+			wgs84North    // 46.93772523671
+			height        // 676.6
+			creationDate  // 2024-10-21 11:58:34
+			editionDate   // 2024-10-21 11:58:34
+			status        // VALIDATED
+	}
+
+
+	logical-source businessOrganisations {
+
+		referenceables
+			businessOrganisation                // ch:1:sboid:100670
+			businessOrganisationNumber          // 871
+			businessOrganisationAbbreviationDe  // BLAG
+			businessOrganisationAbbreviationFr  // BLAG
+			businessOrganisationAbbreviationIt  // BLAG
+			businessOrganisationAbbreviationEn  // BLAG
+			businessOrganisationDescriptionDe   // Busland AG
+			businessOrganisationDescriptionFr   // Busland AG
+			businessOrganisationDescriptionIt   // Busland AG
+			businessOrganisationDescriptionEn   // Busland AG
+	}
+
+}

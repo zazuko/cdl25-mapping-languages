@@ -1,0 +1,236 @@
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+PREFIX ch: <https://schema.ld.admin.ch/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX example: <http://example.org/>
+PREFIX gtfs: <http://vocab.gtfs.org/terms#>
+PREFIX otd: <https://lod.opentransportdata.swiss/vocab/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<#Stop>
+	a rr:TriplesMap;
+	
+	rr:logicalTable [ rr:tableName "stops" ];
+	
+	rr:subjectMap [
+		rr:template "https://lod.opentransportdata.swiss/didok/{number}";
+		rr:class schema:CivicStructure;
+		rr:class gtfs:Station
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate otd:sloid;
+		rr:objectMap [
+			rr:column "sloid"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate schema:identifier;
+		rr:objectMap [
+			rr:column "number";
+			rr:datatype xsd:integer
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate dcterms:identifier;
+		rr:objectMap [
+			rr:column "number";
+			rr:datatype xsd:integer
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate owl:sameAs;
+		rr:objectMap [
+			rr:template "https://geo.ld.admin.ch/transportation/stop/{number}"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate schema:alternateName;
+		rr:objectMap [
+			rr:column "abbreviation"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate schema:provider;
+		rr:objectMap [
+			rr:template "https://lod.opentransportdata.swiss/provider/{businessOrganisationNumber}"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			rr:column "designationOfficial"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate schema:name;
+		rr:objectMap [
+			rr:column "designationOfficial"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate ch:municipality;
+		rr:objectMap [
+			rr:template "https://ld.admin.ch/municipality/{fsoNumber}"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate ch:canton;
+		rr:objectMap [
+			rr:template "https://ld.admin.ch/canton/{cantonFsoNumber}"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate wgs:lat;
+		rr:objectMap [
+			rr:column "wgs84North";
+			rr:datatype xsd:float
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate wgs:long;
+		rr:objectMap [
+			rr:column "wgs84East";
+			rr:datatype xsd:float
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate schema:elevation;
+		rr:objectMap [
+			rr:column "height";
+			rr:datatype xsd:float
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate example:pptf_stop_abbreviation;
+		rr:objectMap [
+			rr:column "abbreviation"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate example:pptf_stop_isoCountryCode;
+		rr:objectMap [
+			rr:column "isoCountryCode"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate example:pptf_stop_longLatAsPoint;
+		rr:objectMap [
+			rr:template "POINT({wgs84East} {wgs84North})";
+			rr:termType rr:Literal
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate example:pptf_stop_meansOfTransport;
+		rr:objectMap [
+			rr:column "meansOfTransport"
+		]
+	].
+	
+<#Provider>
+	a rr:TriplesMap;
+	
+	rr:logicalTable [ rr:tableName "stops" ];
+	
+	rr:subjectMap [
+		rr:template "https://lod.opentransportdata.swiss/provider/{businessOrganisationNumber}";
+		rr:class schema:Organization
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate otd:sboid;
+		rr:objectMap [
+			rr:column "businessOrganisation"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate schema:identifier;
+		rr:objectMap [
+			rr:column "businessOrganisationNumber"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate schema:alternateName;
+		rr:objectMap [
+			rr:column "businessOrganisationAbbreviationDe";
+			rr:language "de"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate schema:alternateName;
+		rr:objectMap [
+			rr:column "businessOrganisationAbbreviationFr";
+			rr:language "fr"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate schema:alternateName;
+		rr:objectMap [
+			rr:column "businessOrganisationAbbreviationIt";
+			rr:language "it"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate schema:alternateName;
+		rr:objectMap [
+			rr:column "businessOrganisationAbbreviationEn";
+			rr:language "en"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			rr:column "businessOrganisationDescriptionDe";
+			rr:language "de"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			rr:column "businessOrganisationDescriptionFr";
+			rr:language "fr"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			rr:column "businessOrganisationDescriptionIt";
+			rr:language "it"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			rr:column "businessOrganisationDescriptionEn";
+			rr:language "en"
+		]
+	].
+	

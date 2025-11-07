@@ -1,0 +1,105 @@
+language-tags {
+	de
+	en
+	fr
+	it
+}
+
+vocabulary xsd {
+	prefix "xsd" "http://www.w3.org/2001/XMLSchema#"
+
+	datatypes
+		integer
+		float
+}
+
+vocabulary owl {
+	prefix "owl" "http://www.w3.org/2002/07/owl#"
+
+	properties
+		sameAs
+}
+
+vocabulary dcterms {
+	prefix "dcterms" "http://purl.org/dc/terms/"
+
+	properties
+		identifier
+}
+
+vocabulary gtfs {
+	prefix "gtfs" "http://vocab.gtfs.org/terms#"
+
+	classes
+		Station
+
+	properties
+		stop
+}
+
+vocabulary wgs {
+	prefix "wgs" "http://www.w3.org/2003/01/geo/wgs84_pos#"
+
+	properties
+		lat
+		long
+}
+
+vocabulary schema {
+	prefix "schema" "http://schema.org/"
+
+	classes
+		CivicStructure
+		Organization
+
+	properties
+		alternateName
+		elevation
+		identifier
+		name
+		provider
+}
+
+vocabulary rdfs {
+	prefix "rdfs" "http://www.w3.org/2000/01/rdf-schema#"
+
+	properties
+		label
+}
+
+vocabulary otd {
+	prefix "otd" "https://lod.opentransportdata.swiss/vocab/"
+
+	classes
+		Alliance
+		TransportEdge
+		Zone
+		ZoningPlan
+
+	properties
+		alliance
+		meanOfTransport
+		sboid // Swiss Business Organisation ID (SBOID)
+		sloid // Swiss Location ID (SLOID)
+		zone
+		zoningPlan
+}
+
+vocabulary ch {
+	prefix "ch" "https://schema.ld.admin.ch/"
+
+	properties
+		municipality
+		canton
+}
+
+vocabulary example {
+	prefix "example" "http://example.org/"
+
+	properties
+		pptf_stop_isoCountryCode
+		pptf_stop_meansOfTransport
+		pptf_stop_longLatAsPoint
+		pptf_stop_abbreviation
+}
+

@@ -1,0 +1,111 @@
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX otd: <https://lod.opentransportdata.swiss/vocab/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<#Alliance>
+	a rr:TriplesMap;
+	
+	rml:logicalSource [
+		rml:source "zoning-and-transport.xml";
+		rml:referenceFormulation ql:XPath;
+		rml:iterator "/export/zoning/alliance"
+	];
+	
+	rr:subjectMap [
+		rr:template "https://lod.opentransportdata.swiss/alliance/{@id}";
+		rr:class otd:Alliance
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			rml:reference "@id"
+		]
+	].
+	
+<#Zoningplan>
+	a rr:TriplesMap;
+	
+	rml:logicalSource [
+		rml:source "zoning-and-transport.xml";
+		rml:referenceFormulation ql:XPath;
+		rml:iterator "/export/zoning/alliance/zoningplan"
+	];
+	
+	rr:subjectMap [
+		rr:template "https://lod.opentransportdata.swiss/zoningplan/{../@id}/{@id}";
+		rr:class otd:ZoningPlan
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate schema:identifier;
+		rr:objectMap [
+			rml:reference "@id"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			rml:reference "@name"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate otd:alliance;
+		rr:objectMap [
+			rr:template "https://lod.opentransportdata.swiss/alliance/{../@id}"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate otd:zone;
+		rr:objectMap [
+			rr:parentTriplesMap  <#Zone>;
+			rr:joinCondition [
+				rr:child "@id";
+				rr:parent "../@id";
+			]
+		]
+	].
+	
+<#Zone>
+	a rr:TriplesMap;
+	
+	rml:logicalSource [
+		rml:source "zoning-and-transport.xml";
+		rml:referenceFormulation ql:XPath;
+		rml:iterator "/export/zoning/alliance/zoningplan/zone"
+	];
+	
+	rr:subjectMap [
+		rr:template "https://lod.opentransportdata.swiss/zone/{../../@id}/{../@id}/{@id}";
+		rr:class otd:Zone
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate schema:identifier;
+		rr:objectMap [
+			rml:reference "@id";
+			rr:datatype xsd:integer
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			rml:reference "@name"
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate otd:zoningPlan;
+		rr:objectMap [
+			rr:template "https://lod.opentransportdata.swiss/zoningplan/{../../@id}/{../@id}"
+		]
+	].
+	

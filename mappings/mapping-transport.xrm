@@ -1,0 +1,14 @@
+output rml
+
+map TransportEdge from transport.edge {
+	subject template transportEdgeRegularIri with stop1 stop2 operator meanOfTransport;
+
+	types
+		otd.TransportEdge
+
+	properties
+		gtfs.stop template stopIri with stop1;
+		gtfs.stop template stopIri with stop2;
+		otd.meanOfTransport from meanOfTransport;
+		otd.zone parent-map Zone join zoneId with zoneId;
+}

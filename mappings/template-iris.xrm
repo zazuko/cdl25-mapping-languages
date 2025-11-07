@@ -1,0 +1,8 @@
+template allianceIri "https://lod.opentransportdata.swiss/alliance/{0}"
+template zoningplanIri "https://lod.opentransportdata.swiss/zoningplan/{0}/{1}"
+template zoneIri "https://lod.opentransportdata.swiss/zone/{0}/{1}/{2}"
+
+template transportEdgeRegularIri "https://lod.opentransportdata.swiss/transportedge/{0}/{1}/{2}/{3}/regular"
+
+template stopIri "https://lod.opentransportdata.swiss/didok/{0}"
+template providerIri "https://lod.opentransportdata.swiss/provider/{0}"

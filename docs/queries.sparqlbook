@@ -1,0 +1,50 @@
+[
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "# SPARQL Queries\n\nWith the first query, we create a table of contents. It shows how many instances there are of each class.",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "# [endpoint=../output/*.ttl]\n\nSELECT ?class (COUNT(?s) AS ?count) WHERE {\n    ?s a ?class\n} GROUP BY ?class\nORDER BY ?class",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## Resource Samples\n\n`DESCRIBE` shows us all statements for one or more resources. This is useful to get an idea of the properties used, in order to craft more specific queries\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "# [endpoint=../output/*.ttl]\n\nDESCRIBE\n<https://lod.opentransportdata.swiss/alliance/libero>                                 # alliance\n# <https://lod.opentransportdata.swiss/zoningplan/libero/libero-billett-billett-libero> # zoningplan\n# <https://lod.opentransportdata.swiss/zone/libero/libero-billett-billett-libero/300>   # zone\n\n# <https://lod.opentransportdata.swiss/transportedge/8504229/8504300/sbb/bahn/regular>  # transport-edge;\n\n# <https://lod.opentransportdata.swiss/didok/8504300> # stop\n# <https://lod.opentransportdata.swiss/provider/11>   # organization",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## Organizations\n\nA list of organzations and their \"english\" label.",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "# [endpoint=../output/*.ttl]\n\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX schema: <http://schema.org/>\n\nSELECT * WHERE {\n    ?s a schema:Organization.\n    ?s rdfs:label ?label.\n    FILTER(LANG(?label) = \"en\")\n}",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "## TransportEdges\n\nThe transport-edges from the stop `Biel/Bienne`",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "# [endpoint=../output/*.ttl]\n\nPREFIX gtfs: <http://vocab.gtfs.org/terms#>\nPREFIX otd: <https://lod.opentransportdata.swiss/vocab/>\nPREFIX schema: <http://schema.org/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT\n  (sample(?stop2Label) as ?stopLabel)\n  (sample(?stop2) as ?stop)\n  (group_concat(distinct ?meanOfTransport; separator=\",\") as ?meansOfTransport)\n  (group_concat(distinct str(?zoneId); separator=\",\") as ?zones)\n\nWHERE {\n\n  ?stop1 ^gtfs:stop ?edge.\n  ?stop2 ^gtfs:stop ?edge.\n  FILTER (?stop1 != ?stop2)\n\n  ?stop2 rdfs:label ?stop2Label .\n   \n  OPTIONAL {\n    ?edge otd:meanOfTransport ?meanOfTransport.\n  }\n\n  OPTIONAL {\n    ?edge otd:zone/schema:identifier ?zoneId.\n  }\n\n\tVALUES ?stop1 {\n   \t<https://lod.opentransportdata.swiss/didok/8504300>    # stop `Biel/Bienne`\n\t}\n}\nGROUP BY ?stop2Label\nORDER BY ?stop2Label ?meanOfTransport",
+    "metadata": {}
+  }
+]

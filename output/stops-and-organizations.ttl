@@ -1,0 +1,212 @@
+<https://lod.opentransportdata.swiss/provider/11> <http://schema.org/alternateName> "SBB"@de .
+<https://lod.opentransportdata.swiss/provider/889> <http://schema.org/alternateName> "VB"@de .
+<https://lod.opentransportdata.swiss/provider/38> <http://schema.org/alternateName> "ASM-bti"@de,"ASM-bti"@it .
+<https://lod.opentransportdata.swiss/provider/11> <http://schema.org/alternateName> "FFS"@it .
+<https://lod.opentransportdata.swiss/provider/889> <http://schema.org/alternateName> "VB"@it .
+<https://lod.opentransportdata.swiss/provider/38> <http://schema.org/alternateName> "ASM-bti"@fr .
+<https://lod.opentransportdata.swiss/provider/11> <http://schema.org/alternateName> "CFF"@fr .
+<https://lod.opentransportdata.swiss/provider/889> <http://schema.org/alternateName> "VB"@fr .
+<https://lod.opentransportdata.swiss/provider/11> <http://schema.org/alternateName> "SBB"@en .
+<https://lod.opentransportdata.swiss/provider/889> <http://schema.org/alternateName> "VB"@en .
+<https://lod.opentransportdata.swiss/provider/38> <http://schema.org/alternateName> "ASM-bti"@en .
+<https://lod.opentransportdata.swiss/didok/8504461> <http://schema.org/alternateName> "NIDA" .
+<https://lod.opentransportdata.swiss/didok/8504229> <http://schema.org/alternateName> "TUE" .
+<https://lod.opentransportdata.swiss/didok/8504300> <http://schema.org/alternateName> "BI" .
+<https://lod.opentransportdata.swiss/didok/8576391> <http://schema.org/alternateName> "BIBF" .
+<https://lod.opentransportdata.swiss/didok/8504469> <http://schema.org/alternateName> "NIBE" .
+<https://lod.opentransportdata.swiss/didok/8593389> <http://www.w3.org/2002/07/owl#sameAs> <https://geo.ld.admin.ch/transportation/stop/8593389> .
+<https://lod.opentransportdata.swiss/didok/8504229> <http://www.w3.org/2002/07/owl#sameAs> <https://geo.ld.admin.ch/transportation/stop/8504229> .
+<https://lod.opentransportdata.swiss/didok/8579946> <http://www.w3.org/2002/07/owl#sameAs> <https://geo.ld.admin.ch/transportation/stop/8579946> .
+<https://lod.opentransportdata.swiss/didok/8504461> <http://www.w3.org/2002/07/owl#sameAs> <https://geo.ld.admin.ch/transportation/stop/8504461> .
+<https://lod.opentransportdata.swiss/didok/8571202> <http://www.w3.org/2002/07/owl#sameAs> <https://geo.ld.admin.ch/transportation/stop/8571202> .
+<https://lod.opentransportdata.swiss/didok/8576391> <http://www.w3.org/2002/07/owl#sameAs> <https://geo.ld.admin.ch/transportation/stop/8576391> .
+<https://lod.opentransportdata.swiss/didok/8571201> <http://www.w3.org/2002/07/owl#sameAs> <https://geo.ld.admin.ch/transportation/stop/8571201> .
+<https://lod.opentransportdata.swiss/didok/8594089> <http://www.w3.org/2002/07/owl#sameAs> <https://geo.ld.admin.ch/transportation/stop/8594089> .
+<https://lod.opentransportdata.swiss/didok/8504469> <http://www.w3.org/2002/07/owl#sameAs> <https://geo.ld.admin.ch/transportation/stop/8504469> .
+<https://lod.opentransportdata.swiss/didok/8504300> <http://www.w3.org/2002/07/owl#sameAs> <https://geo.ld.admin.ch/transportation/stop/8504300> .
+<https://lod.opentransportdata.swiss/didok/8593389> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "47.12705042171"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8504229> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "47.11500775261"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8504300> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "47.13289787086"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8571202> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "47.1251890868"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8579946> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "47.13042013182"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8571201> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "47.13263569979"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8576391> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "47.13346889898"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8504469> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "47.11982000197"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8594089> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "47.1235898734"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8504461> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "47.12385145793"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8504229> <https://lod.opentransportdata.swiss/vocab/sloid> "ch:1:sloid:4229" .
+<https://lod.opentransportdata.swiss/didok/8504461> <https://lod.opentransportdata.swiss/vocab/sloid> "ch:1:sloid:4461" .
+<https://lod.opentransportdata.swiss/didok/8504300> <https://lod.opentransportdata.swiss/vocab/sloid> "ch:1:sloid:4300" .
+<https://lod.opentransportdata.swiss/didok/8593389> <https://lod.opentransportdata.swiss/vocab/sloid> "ch:1:sloid:93389" .
+<https://lod.opentransportdata.swiss/didok/8504469> <https://lod.opentransportdata.swiss/vocab/sloid> "ch:1:sloid:4469" .
+<https://lod.opentransportdata.swiss/didok/8579946> <https://lod.opentransportdata.swiss/vocab/sloid> "ch:1:sloid:79946" .
+<https://lod.opentransportdata.swiss/didok/8571202> <https://lod.opentransportdata.swiss/vocab/sloid> "ch:1:sloid:71202" .
+<https://lod.opentransportdata.swiss/didok/8571201> <https://lod.opentransportdata.swiss/vocab/sloid> "ch:1:sloid:71201" .
+<https://lod.opentransportdata.swiss/didok/8594089> <https://lod.opentransportdata.swiss/vocab/sloid> "ch:1:sloid:94089" .
+<https://lod.opentransportdata.swiss/didok/8576391> <https://lod.opentransportdata.swiss/vocab/sloid> "ch:1:sloid:76391" .
+<https://lod.opentransportdata.swiss/didok/8504229> <http://purl.org/dc/terms/identifier> "8504229"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/didok/8579946> <http://purl.org/dc/terms/identifier> "8579946"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/didok/8504461> <http://purl.org/dc/terms/identifier> "8504461"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/didok/8593389> <http://purl.org/dc/terms/identifier> "8593389"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/didok/8576391> <http://purl.org/dc/terms/identifier> "8576391"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/didok/8571201> <http://purl.org/dc/terms/identifier> "8571201"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/didok/8594089> <http://purl.org/dc/terms/identifier> "8594089"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/didok/8504469> <http://purl.org/dc/terms/identifier> "8504469"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/didok/8571202> <http://purl.org/dc/terms/identifier> "8571202"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/didok/8504300> <http://purl.org/dc/terms/identifier> "8504300"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/didok/8579946> <http://example.org/pptf_stop_longLatAsPoint> "POINT(7.23980135246 47.13042013182)" .
+<https://lod.opentransportdata.swiss/didok/8593389> <http://example.org/pptf_stop_longLatAsPoint> "POINT(7.24033306012 47.12705042171)" .
+<https://lod.opentransportdata.swiss/didok/8576391> <http://example.org/pptf_stop_longLatAsPoint> "POINT(7.24331441119 47.13346889898)" .
+<https://lod.opentransportdata.swiss/didok/8504229> <http://example.org/pptf_stop_longLatAsPoint> "POINT(7.19731836547 47.11500775261)" .
+<https://lod.opentransportdata.swiss/didok/8594089> <http://example.org/pptf_stop_longLatAsPoint> "POINT(7.24176922411 47.1235898734)" .
+<https://lod.opentransportdata.swiss/didok/8571202> <http://example.org/pptf_stop_longLatAsPoint> "POINT(7.24068264236 47.1251890868)" .
+<https://lod.opentransportdata.swiss/didok/8504461> <http://example.org/pptf_stop_longLatAsPoint> "POINT(7.24218997142 47.12385145793)" .
+<https://lod.opentransportdata.swiss/didok/8504300> <http://example.org/pptf_stop_longLatAsPoint> "POINT(7.24291060323 47.13289787086)" .
+<https://lod.opentransportdata.swiss/didok/8571201> <http://example.org/pptf_stop_longLatAsPoint> "POINT(7.24002228385 47.13263569979)" .
+<https://lod.opentransportdata.swiss/didok/8504469> <http://example.org/pptf_stop_longLatAsPoint> "POINT(7.24031999956 47.11982000197)" .
+<https://lod.opentransportdata.swiss/didok/8576391> <https://schema.ld.admin.ch/municipality> <https://ld.admin.ch/municipality/371> .
+<https://lod.opentransportdata.swiss/didok/8571201> <https://schema.ld.admin.ch/municipality> <https://ld.admin.ch/municipality/371> .
+<https://lod.opentransportdata.swiss/didok/8593389> <https://schema.ld.admin.ch/municipality> <https://ld.admin.ch/municipality/743> .
+<https://lod.opentransportdata.swiss/didok/8504469> <https://schema.ld.admin.ch/municipality> <https://ld.admin.ch/municipality/743> .
+<https://lod.opentransportdata.swiss/didok/8594089> <https://schema.ld.admin.ch/municipality> <https://ld.admin.ch/municipality/743> .
+<https://lod.opentransportdata.swiss/didok/8504229> <https://schema.ld.admin.ch/municipality> <https://ld.admin.ch/municipality/756> .
+<https://lod.opentransportdata.swiss/didok/8571202> <https://schema.ld.admin.ch/municipality> <https://ld.admin.ch/municipality/743> .
+<https://lod.opentransportdata.swiss/didok/8579946> <https://schema.ld.admin.ch/municipality> <https://ld.admin.ch/municipality/371> .
+<https://lod.opentransportdata.swiss/didok/8504300> <https://schema.ld.admin.ch/municipality> <https://ld.admin.ch/municipality/371> .
+<https://lod.opentransportdata.swiss/didok/8504461> <https://schema.ld.admin.ch/municipality> <https://ld.admin.ch/municipality/743> .
+<https://lod.opentransportdata.swiss/didok/8504300> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "7.24291060323"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8504229> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "7.19731836547"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8576391> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "7.24331441119"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8593389> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "7.24033306012"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8504461> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "7.24218997142"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8579946> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "7.23980135246"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8571202> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "7.24068264236"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8504469> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "7.24031999956"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8594089> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "7.24176922411"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8571201> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "7.24002228385"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8504469> <http://example.org/pptf_stop_meansOfTransport> "TRAIN" .
+<https://lod.opentransportdata.swiss/didok/8576391> <http://example.org/pptf_stop_meansOfTransport> "BUS" .
+<https://lod.opentransportdata.swiss/didok/8571201> <http://example.org/pptf_stop_meansOfTransport> "BUS" .
+<https://lod.opentransportdata.swiss/didok/8594089> <http://example.org/pptf_stop_meansOfTransport> "BUS" .
+<https://lod.opentransportdata.swiss/didok/8504229> <http://example.org/pptf_stop_meansOfTransport> "TRAIN" .
+<https://lod.opentransportdata.swiss/didok/8593389> <http://example.org/pptf_stop_meansOfTransport> "BUS" .
+<https://lod.opentransportdata.swiss/didok/8504300> <http://example.org/pptf_stop_meansOfTransport> "TRAIN" .
+<https://lod.opentransportdata.swiss/didok/8579946> <http://example.org/pptf_stop_meansOfTransport> "BUS" .
+<https://lod.opentransportdata.swiss/didok/8571202> <http://example.org/pptf_stop_meansOfTransport> "BUS" .
+<https://lod.opentransportdata.swiss/didok/8504461> <http://example.org/pptf_stop_meansOfTransport> "TRAIN" .
+<https://lod.opentransportdata.swiss/didok/8576391> <http://schema.org/elevation> "437.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8504300> <http://schema.org/elevation> "437.08"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8504229> <http://schema.org/elevation> "434.55"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8504469> <http://schema.org/elevation> "431.2"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8571201> <http://schema.org/elevation> "435.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8579946> <http://schema.org/elevation> "433.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8571202> <http://schema.org/elevation> "435.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8593389> <http://schema.org/elevation> "435.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8504461> <http://schema.org/elevation> "433.3"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/didok/8594089> <http://schema.org/elevation> "436.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://lod.opentransportdata.swiss/provider/11> <https://lod.opentransportdata.swiss/vocab/sboid> "ch:1:sboid:100001" .
+<https://lod.opentransportdata.swiss/provider/889> <https://lod.opentransportdata.swiss/vocab/sboid> "ch:1:sboid:100688" .
+<https://lod.opentransportdata.swiss/provider/38> <https://lod.opentransportdata.swiss/vocab/sboid> "ch:1:sboid:100020" .
+<https://lod.opentransportdata.swiss/didok/8504229> <http://example.org/pptf_stop_abbreviation> "TUE" .
+<https://lod.opentransportdata.swiss/didok/8504461> <http://example.org/pptf_stop_abbreviation> "NIDA" .
+<https://lod.opentransportdata.swiss/didok/8504469> <http://example.org/pptf_stop_abbreviation> "NIBE" .
+<https://lod.opentransportdata.swiss/didok/8504300> <http://example.org/pptf_stop_abbreviation> "BI" .
+<https://lod.opentransportdata.swiss/didok/8576391> <http://example.org/pptf_stop_abbreviation> "BIBF" .
+<https://lod.opentransportdata.swiss/didok/8593389> a <http://schema.org/CivicStructure> .
+<https://lod.opentransportdata.swiss/didok/8504229> a <http://schema.org/CivicStructure> .
+<https://lod.opentransportdata.swiss/didok/8504300> a <http://schema.org/CivicStructure> .
+<https://lod.opentransportdata.swiss/didok/8579946> a <http://schema.org/CivicStructure> .
+<https://lod.opentransportdata.swiss/didok/8504461> a <http://schema.org/CivicStructure> .
+<https://lod.opentransportdata.swiss/didok/8571202> a <http://schema.org/CivicStructure> .
+<https://lod.opentransportdata.swiss/didok/8504469> a <http://schema.org/CivicStructure> .
+<https://lod.opentransportdata.swiss/didok/8576391> a <http://schema.org/CivicStructure> .
+<https://lod.opentransportdata.swiss/didok/8571201> a <http://schema.org/CivicStructure> .
+<https://lod.opentransportdata.swiss/didok/8594089> a <http://schema.org/CivicStructure> .
+<https://lod.opentransportdata.swiss/provider/11> <http://schema.org/identifier> "11"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/provider/889> <http://schema.org/identifier> "889"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/provider/38> <http://schema.org/identifier> "38"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/didok/8504300> <http://schema.org/identifier> "8504300"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/didok/8579946> <http://schema.org/identifier> "8579946"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/didok/8504461> <http://schema.org/identifier> "8504461"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/didok/8576391> <http://schema.org/identifier> "8576391"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/didok/8571201> <http://schema.org/identifier> "8571201"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/didok/8594089> <http://schema.org/identifier> "8594089"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/didok/8504469> <http://schema.org/identifier> "8504469"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/didok/8593389> <http://schema.org/identifier> "8593389"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/didok/8571202> <http://schema.org/identifier> "8571202"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/didok/8504229> <http://schema.org/identifier> "8504229"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://lod.opentransportdata.swiss/didok/8504461> <http://schema.org/name> "Nidau" .
+<https://lod.opentransportdata.swiss/didok/8504229> <http://schema.org/name> "Tüscherz" .
+<https://lod.opentransportdata.swiss/didok/8571201> <http://schema.org/name> "Biel/Bienne, Badhausstrasse" .
+<https://lod.opentransportdata.swiss/didok/8593389> <http://schema.org/name> "Nidau, Schloss/Château" .
+<https://lod.opentransportdata.swiss/didok/8504300> <http://schema.org/name> "Biel/Bienne" .
+<https://lod.opentransportdata.swiss/didok/8504469> <http://schema.org/name> "Nidau Beunden" .
+<https://lod.opentransportdata.swiss/didok/8594089> <http://schema.org/name> "Nidau, Bahnhof" .
+<https://lod.opentransportdata.swiss/didok/8579946> <http://schema.org/name> "Biel/Bienne, Residenz" .
+<https://lod.opentransportdata.swiss/didok/8571202> <http://schema.org/name> "Nidau, Kirche/Eglise" .
+<https://lod.opentransportdata.swiss/didok/8576391> <http://schema.org/name> "Biel/Bienne, Bahnhof/Gare";
+<https://schema.ld.admin.ch/canton> <https://ld.admin.ch/canton/2> .
+<https://lod.opentransportdata.swiss/didok/8571201> <https://schema.ld.admin.ch/canton> <https://ld.admin.ch/canton/2> .
+<https://lod.opentransportdata.swiss/didok/8594089> <https://schema.ld.admin.ch/canton> <https://ld.admin.ch/canton/2> .
+<https://lod.opentransportdata.swiss/didok/8504229> <https://schema.ld.admin.ch/canton> <https://ld.admin.ch/canton/2> .
+<https://lod.opentransportdata.swiss/didok/8571202> <https://schema.ld.admin.ch/canton> <https://ld.admin.ch/canton/2> .
+<https://lod.opentransportdata.swiss/didok/8593389> <https://schema.ld.admin.ch/canton> <https://ld.admin.ch/canton/2> .
+<https://lod.opentransportdata.swiss/didok/8504469> <https://schema.ld.admin.ch/canton> <https://ld.admin.ch/canton/2> .
+<https://lod.opentransportdata.swiss/didok/8504300> <https://schema.ld.admin.ch/canton> <https://ld.admin.ch/canton/2> .
+<https://lod.opentransportdata.swiss/didok/8579946> <https://schema.ld.admin.ch/canton> <https://ld.admin.ch/canton/2> .
+<https://lod.opentransportdata.swiss/didok/8504461> <https://schema.ld.admin.ch/canton> <https://ld.admin.ch/canton/2> .
+<https://lod.opentransportdata.swiss/provider/11> a <http://schema.org/Organization> .
+<https://lod.opentransportdata.swiss/provider/889> a <http://schema.org/Organization> .
+<https://lod.opentransportdata.swiss/provider/38> a <http://schema.org/Organization> .
+<https://lod.opentransportdata.swiss/didok/8576391> a <http://vocab.gtfs.org/terms#Station> .
+<https://lod.opentransportdata.swiss/didok/8571201> a <http://vocab.gtfs.org/terms#Station> .
+<https://lod.opentransportdata.swiss/didok/8594089> a <http://vocab.gtfs.org/terms#Station> .
+<https://lod.opentransportdata.swiss/didok/8579946> a <http://vocab.gtfs.org/terms#Station> .
+<https://lod.opentransportdata.swiss/didok/8504461> a <http://vocab.gtfs.org/terms#Station> .
+<https://lod.opentransportdata.swiss/didok/8504229> a <http://vocab.gtfs.org/terms#Station> .
+<https://lod.opentransportdata.swiss/didok/8593389> a <http://vocab.gtfs.org/terms#Station> .
+<https://lod.opentransportdata.swiss/didok/8504300> a <http://vocab.gtfs.org/terms#Station> .
+<https://lod.opentransportdata.swiss/didok/8571202> a <http://vocab.gtfs.org/terms#Station> .
+<https://lod.opentransportdata.swiss/didok/8504469> a <http://vocab.gtfs.org/terms#Station> .
+<https://lod.opentransportdata.swiss/didok/8504300> <http://schema.org/provider> <https://lod.opentransportdata.swiss/provider/11> .
+<https://lod.opentransportdata.swiss/didok/8579946> <http://schema.org/provider> <https://lod.opentransportdata.swiss/provider/889> .
+<https://lod.opentransportdata.swiss/didok/8504469> <http://schema.org/provider> <https://lod.opentransportdata.swiss/provider/38> .
+<https://lod.opentransportdata.swiss/didok/8571202> <http://schema.org/provider> <https://lod.opentransportdata.swiss/provider/889> .
+<https://lod.opentransportdata.swiss/didok/8504229> <http://schema.org/provider> <https://lod.opentransportdata.swiss/provider/11> .
+<https://lod.opentransportdata.swiss/didok/8593389> <http://schema.org/provider> <https://lod.opentransportdata.swiss/provider/889> .
+<https://lod.opentransportdata.swiss/didok/8576391> <http://schema.org/provider> <https://lod.opentransportdata.swiss/provider/889> .
+<https://lod.opentransportdata.swiss/didok/8571201> <http://schema.org/provider> <https://lod.opentransportdata.swiss/provider/889> .
+<https://lod.opentransportdata.swiss/didok/8594089> <http://schema.org/provider> <https://lod.opentransportdata.swiss/provider/889> .
+<https://lod.opentransportdata.swiss/didok/8504461> <http://schema.org/provider> <https://lod.opentransportdata.swiss/provider/38> .
+<https://lod.opentransportdata.swiss/provider/889> <http://www.w3.org/2000/01/rdf-schema#label> "Transports publics biennois"@fr .
+<https://lod.opentransportdata.swiss/provider/38> <http://www.w3.org/2000/01/rdf-schema#label> "Aare Seeland mobil (bti)"@fr .
+<https://lod.opentransportdata.swiss/provider/11> <http://www.w3.org/2000/01/rdf-schema#label> "Chemins de fer fédéraux suisses CFF"@fr .
+<https://lod.opentransportdata.swiss/provider/889> <http://www.w3.org/2000/01/rdf-schema#label> "Verkehrsbetriebe Biel"@de .
+<https://lod.opentransportdata.swiss/provider/38> <http://www.w3.org/2000/01/rdf-schema#label> "Aare Seeland mobil (bti)"@de .
+<https://lod.opentransportdata.swiss/provider/11> <http://www.w3.org/2000/01/rdf-schema#label> "Schweizerische Bundesbahnen SBB"@de .
+<https://lod.opentransportdata.swiss/provider/38> <http://www.w3.org/2000/01/rdf-schema#label> "Aare Seeland mobil (bti)"@en .
+<https://lod.opentransportdata.swiss/provider/889> <http://www.w3.org/2000/01/rdf-schema#label> "Verkehrsbetriebe Biel"@en .
+<https://lod.opentransportdata.swiss/provider/11> <http://www.w3.org/2000/01/rdf-schema#label> "Swiss Federal Railways SBB"@en .
+<https://lod.opentransportdata.swiss/provider/889> <http://www.w3.org/2000/01/rdf-schema#label> "Verkehrsbetriebe Biel"@it .
+<https://lod.opentransportdata.swiss/provider/38> <http://www.w3.org/2000/01/rdf-schema#label> "Aare Seeland mobil (bti)"@it .
+<https://lod.opentransportdata.swiss/provider/11> <http://www.w3.org/2000/01/rdf-schema#label> "Ferrovie federali svizzere FFS"@it .
+<https://lod.opentransportdata.swiss/didok/8504229> <http://www.w3.org/2000/01/rdf-schema#label> "Tüscherz" .
+<https://lod.opentransportdata.swiss/didok/8579946> <http://www.w3.org/2000/01/rdf-schema#label> "Biel/Bienne, Residenz" .
+<https://lod.opentransportdata.swiss/didok/8571202> <http://www.w3.org/2000/01/rdf-schema#label> "Nidau, Kirche/Eglise" .
+<https://lod.opentransportdata.swiss/didok/8571201> <http://www.w3.org/2000/01/rdf-schema#label> "Biel/Bienne, Badhausstrasse" .
+<https://lod.opentransportdata.swiss/didok/8504461> <http://www.w3.org/2000/01/rdf-schema#label> "Nidau" .
+<https://lod.opentransportdata.swiss/didok/8593389> <http://www.w3.org/2000/01/rdf-schema#label> "Nidau, Schloss/Château" .
+<https://lod.opentransportdata.swiss/didok/8594089> <http://www.w3.org/2000/01/rdf-schema#label> "Nidau, Bahnhof" .
+<https://lod.opentransportdata.swiss/didok/8504300> <http://www.w3.org/2000/01/rdf-schema#label> "Biel/Bienne" .
+<https://lod.opentransportdata.swiss/didok/8504469> <http://www.w3.org/2000/01/rdf-schema#label> "Nidau Beunden" .
+<https://lod.opentransportdata.swiss/didok/8576391> <http://www.w3.org/2000/01/rdf-schema#label> "Biel/Bienne, Bahnhof/Gare" .
+<https://lod.opentransportdata.swiss/didok/8504469> <http://example.org/pptf_stop_isoCountryCode> "CH" .
+<https://lod.opentransportdata.swiss/didok/8579946> <http://example.org/pptf_stop_isoCountryCode> "CH" .
+<https://lod.opentransportdata.swiss/didok/8504461> <http://example.org/pptf_stop_isoCountryCode> "CH" .
+<https://lod.opentransportdata.swiss/didok/8593389> <http://example.org/pptf_stop_isoCountryCode> "CH" .
+<https://lod.opentransportdata.swiss/didok/8576391> <http://example.org/pptf_stop_isoCountryCode> "CH" .
+<https://lod.opentransportdata.swiss/didok/8571201> <http://example.org/pptf_stop_isoCountryCode> "CH" .
+<https://lod.opentransportdata.swiss/didok/8594089> <http://example.org/pptf_stop_isoCountryCode> "CH" .
+<https://lod.opentransportdata.swiss/didok/8571202> <http://example.org/pptf_stop_isoCountryCode> "CH" .
+<https://lod.opentransportdata.swiss/didok/8504229> <http://example.org/pptf_stop_isoCountryCode> "CH" .
+<https://lod.opentransportdata.swiss/didok/8504300> <http://example.org/pptf_stop_isoCountryCode> "CH" .

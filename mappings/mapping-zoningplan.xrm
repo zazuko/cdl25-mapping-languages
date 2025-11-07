@@ -1,0 +1,36 @@
+output rml
+
+map Alliance from zoning.alliance {
+	subject template allianceIri with id;
+
+	types
+		otd.Alliance
+
+	properties
+		rdfs.label from id;
+}
+
+map Zoningplan from zoning.zoningplan {
+	subject template zoningplanIri with allianceId zoningplanId;
+
+	types
+		otd.ZoningPlan
+
+	properties
+		schema.identifier from zoningplanId;
+		rdfs.label from name;
+		otd.alliance template allianceIri with allianceId;
+		otd.zone parent-map Zone join zoningplanId with zoningplanId;
+}
+
+map Zone from zoning.zone {
+	subject template zoneIri with allianceId zoningplanId zoneId;
+
+	types
+		otd.Zone
+
+	properties
+		schema.identifier from zoneId with datatype xsd.integer;
+		rdfs.label from name;
+		otd.zoningPlan template zoningplanIri with allianceId zoningplanId;	
+}

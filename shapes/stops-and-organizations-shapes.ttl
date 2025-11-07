@@ -1,0 +1,202 @@
+@base <https://lod.opentransportdata.swiss/profile/didok/node-shape/> .
+
+@prefix schema: <http://schema.org/> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix gtfs: <http://vocab.gtfs.org/terms#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ch: <https://schema.ld.admin.ch/> .
+@prefix otd: <https://lod.opentransportdata.swiss/vocab/> .
+
+<StationShape> a sh:NodeShape ;
+	sh:targetClass gtfs:Station ;
+	rdfs:label "Station" ;
+	# sh:closed true ;   # shape kept open, as this example lacks the postprocessing and unprocessed intermediate statements are present
+	skos:example <https://lod.opentransportdata.swiss/didok/8503006> ;
+	sh:property
+        <StationShape/label>,
+        <StationShape/type>,
+		<StationShape/sloid>,
+        <StationShape/identifier-schemaorg>,
+        <StationShape/identifier-dcterms>,
+        <StationShape/sameAs>,
+        <StationShape/name>,
+        <StationShape/alternateName>,
+        <StationShape/provider>,
+        <StationShape/lat>,
+        <StationShape/long>,
+        <StationShape/hasGeometry>,
+        <StationShape/elevation>,
+        <StationShape/containedInPlace>,
+        <StationShape/canton>,
+        <StationShape/municipality> .
+        # <StationShape/meanOfTransport> .
+
+<StationShape/label> a sh:PropertyShape ;
+	sh:path rdfs:label ;
+	sh:datatype xsd:string ;
+	sh:maxCount 1 ;
+	sh:minCount 1 .
+
+<StationShape/type> a sh:PropertyShape ;
+	sh:path rdf:type ;
+    sh:hasValue gtfs:Station, schema:CivicStructure .
+
+<StationShape/sloid> a sh:PropertyShape ;
+	sh:path otd:sloid ;
+	sh:datatype xsd:string ;
+	sh:maxCount 1 ;
+	sh:minCount 1 .
+
+<StationShape/identifier-schemaorg> a sh:PropertyShape ;
+	sh:path schema:identifier ;
+	sh:datatype xsd:integer ;
+	sh:maxCount 1 ;
+	sh:minCount 1 .
+
+<StationShape/identifier-dcterms> a sh:PropertyShape ;
+	sh:path dcterms:identifier ;
+	sh:datatype xsd:integer ;
+	sh:maxCount 1 ;
+	sh:minCount 1 .
+
+<StationShape/sameAs> a sh:PropertyShape ;
+	sh:path owl:sameAs ;
+    sh:nodeKind sh:IRI ;
+	sh:maxCount 1 ;
+	sh:minCount 1 .
+
+<StationShape/name> a sh:PropertyShape ;
+	sh:path schema:name ;
+	sh:datatype xsd:string ;
+	sh:maxCount 1 ;
+	sh:minCount 1 .
+
+<StationShape/alternateName> a sh:PropertyShape ;
+	sh:path schema:alternateName ;
+	sh:datatype xsd:string ;
+	sh:maxCount 1 ;
+	sh:minCount 0 .
+
+<StationShape/provider> a sh:PropertyShape ;
+	sh:path schema:provider ;
+	sh:class schema:Organization ;
+	sh:maxCount 1 ;
+	sh:minCount 1 .
+
+<StationShape/lat> a sh:PropertyShape ;
+	sh:path wgs:lat ;
+	sh:datatype xsd:float ;
+	sh:maxCount 1 ;
+	sh:minCount 0 .
+
+<StationShape/long> a sh:PropertyShape ;
+	sh:path wgs:long ;
+	sh:datatype xsd:float ;
+	sh:maxCount 1 ;
+	sh:minCount 0 .
+
+<StationShape/hasGeometry> a sh:PropertyShape ;
+	sh:path geo:hasGeometry ;
+	sh:class geo:Geometry ;
+	sh:maxCount 1 ;
+	sh:minCount 0 .
+
+<StationShape/elevation> a sh:PropertyShape ;
+	sh:path schema:elevation ;
+	sh:datatype xsd:float ;
+	sh:maxCount 1 ;
+	sh:minCount 0 .
+
+<StationShape/containedInPlace> a sh:PropertyShape ;
+	sh:path schema:containedInPlace ;
+    sh:nodeKind sh:IRI ;
+    # sh:class schema:Country ;
+	sh:maxCount 1 ;
+	sh:minCount 0 .
+
+<StationShape/canton> a sh:PropertyShape ;
+	sh:path ch:canton ;
+    sh:nodeKind sh:IRI ;
+    # sh:class ch:Canton ;
+	sh:maxCount 1 ;
+	sh:minCount 0 .
+
+<StationShape/municipality> a sh:PropertyShape ;
+	sh:path ch:municipality ;
+    sh:nodeKind sh:IRI ;
+    # sh:class ch:Municipality ;
+	sh:maxCount 1 ;
+	sh:minCount 0 .
+
+# 'meanOfTransport' should be from a controlled vocabulary, but this example lacks the postprocessing for that
+# <StationShape/meanOfTransport> a sh:PropertyShape ;
+# 	sh:path otd:meanOfTransport ;
+#   sh:nodeKind sh:IRI ;
+# 	sh:minCount 1 .
+
+<OrganizationShape> a sh:NodeShape ;
+	sh:targetClass schema:Organization ;
+	rdfs:label "Organization" ;
+	sh:closed true ;
+	skos:example <https://lod.opentransportdata.swiss/provider/11> ;
+	sh:property
+        <OrganizationShape/label>,
+        <OrganizationShape/type>,
+        <OrganizationShape/sboid>,
+		<OrganizationShape/identifier>,
+        <OrganizationShape/alternateName> .
+
+<OrganizationShape/label> a sh:PropertyShape ;
+	sh:path rdfs:label ;
+	sh:datatype rdf:langString ;
+	sh:maxCount 4 ;
+	sh:minCount 1 .
+
+<OrganizationShape/type> a sh:PropertyShape ;
+	sh:path rdf:type ;
+    sh:hasValue schema:Organization .
+
+<OrganizationShape/sboid> a sh:PropertyShape ;
+	sh:path otd:sboid ;
+	sh:datatype xsd:string ;
+	sh:maxCount 1 ;
+	sh:minCount 1 .
+
+<OrganizationShape/identifier> a sh:PropertyShape ;
+	sh:path schema:identifier ;
+	sh:datatype xsd:integer ;
+	sh:maxCount 1 ;
+	sh:minCount 1 .
+
+<OrganizationShape/alternateName> a sh:PropertyShape ;
+	sh:path schema:alternateName ;
+	sh:datatype rdf:langString ;
+	sh:maxCount 4 ;
+	sh:minCount 1 .
+
+<GeometryShape> a sh:NodeShape ;
+	sh:targetClass geo:Geometry ;
+	rdfs:label "Geometry" ;
+	sh:closed true ;
+	skos:example <https://lod.opentransportdata.swiss/didok/8503006/geometry> ;
+	sh:property
+        <GeometryShape/type>,
+        <GeometryShape/asWKT> .
+
+<GeometryShape/type> a sh:PropertyShape ;
+	sh:path rdf:type ;
+    sh:hasValue geo:Geometry .
+
+<GeometryShape/asWKT> a sh:PropertyShape ;
+	sh:path geo:asWKT ;
+	sh:datatype geo:wktLiteral ;
+	sh:maxCount 1 ;
+	sh:minCount 1 .
+

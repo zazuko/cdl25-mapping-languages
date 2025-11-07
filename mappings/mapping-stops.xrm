@@ -1,0 +1,48 @@
+output r2rml
+
+map Stop from stops.stops {
+	subject template stopIri with number;
+
+	types
+		schema.CivicStructure
+		gtfs.Station
+
+	properties
+		otd.sloid from sloid;
+		schema.identifier from number with datatype xsd.integer;
+		dcterms.identifier from number with datatype xsd.integer;
+		owl.sameAs template "https://geo.ld.admin.ch/transportation/stop/{0}" with number;
+		schema.alternateName from abbreviation;
+		schema.provider template providerIri with businessOrganisationNumber;
+		rdfs.label from designationOfficial;
+		schema.name from designationOfficial;
+		ch.municipality template "https://ld.admin.ch/municipality/{0}" with fsoNumber;
+		ch.canton template "https://ld.admin.ch/canton/{0}" with cantonFsoNumber;
+		wgs.lat from wgs84North with datatype xsd.float;
+		wgs.long from wgs84East with datatype xsd.float;
+		schema.elevation from height with datatype xsd.float;
+
+		example.pptf_stop_abbreviation from abbreviation;
+		example.pptf_stop_isoCountryCode from isoCountryCode;
+		example.pptf_stop_longLatAsPoint template "POINT({0} {1})" with wgs84East wgs84North as Literal;
+		example.pptf_stop_meansOfTransport from meansOfTransport;
+}
+
+map Provider from stops.businessOrganisations {
+	subject template providerIri with businessOrganisationNumber;
+
+	types
+		schema.Organization
+
+	properties
+		otd.sboid from businessOrganisation;
+		schema.identifier from businessOrganisationNumber;
+		schema.alternateName from businessOrganisationAbbreviationDe with language-tag de;
+		schema.alternateName from businessOrganisationAbbreviationFr with language-tag fr;
+		schema.alternateName from businessOrganisationAbbreviationIt with language-tag it;
+		schema.alternateName from businessOrganisationAbbreviationEn with language-tag en;
+		rdfs.label from businessOrganisationDescriptionDe with language-tag de;
+		rdfs.label from businessOrganisationDescriptionFr with language-tag fr;
+		rdfs.label from businessOrganisationDescriptionIt with language-tag it;
+		rdfs.label from businessOrganisationDescriptionEn with language-tag en;
+}

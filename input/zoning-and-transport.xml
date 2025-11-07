@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export>
+  <zoning>
+    <alliance id="libero" name="Libero">
+      <zoningplan id="libero-billett-billett-libero" name="Libero (Billett) Billett Libero">
+        <zone id="300" name="Biel" />
+        <zone id="301" name="Agglo Biel" />
+      </zoningplan>
+    </alliance>
+  </zoning>
+  <tranport-edges>
+    <tranport-edge stop1="8504229" stop2="8504300" mean-of-transport="bus" operator="extrabus">
+      <zones>
+        <zone idref="300" />
+        <zone idref="301" />
+      </zones>
+    </tranport-edge>
+    <tranport-edge stop1="8504229" stop2="8504300" mean-of-transport="bahn" operator="sbb">
+      <zones>
+        <zone idref="300" />
+        <zone idref="301" />
+      </zones>
+    </tranport-edge>
+    <tranport-edge stop1="8504300" stop2="8504461" mean-of-transport="bahn" operator="asm-bti">
+      <zones>
+        <zone idref="300" />
+      </zones>
+    </tranport-edge>
+    <tranport-edge stop1="8504461" stop2="8504469" mean-of-transport="bahn" operator="asm-bti">
+      <zones>
+        <zone idref="300" />
+      </zones>
+    </tranport-edge>
+    <tranport-edge stop1="8571201" stop2="8576391" mean-of-transport="bus" operator="vb">
+      <zones>
+        <zone idref="300" />
+      </zones>
+    </tranport-edge>
+    <tranport-edge stop1="8571201" stop2="8579946" mean-of-transport="bus" operator="vb">
+      <zones>
+        <zone idref="300" />
+      </zones>
+    </tranport-edge>
+    <tranport-edge stop1="8579946" stop2="8593389" mean-of-transport="bus" operator="vb">
+      <zones>
+        <zone idref="300" />
+      </zones>
+    </tranport-edge>
+    <tranport-edge stop1="8571202" stop2="8593389" mean-of-transport="bus" operator="vb">
+      <zones>
+        <zone idref="300" />
+      </zones>
+    </tranport-edge>
+    <tranport-edge stop1="8571202" stop2="8594089" mean-of-transport="bus" operator="vb">
+      <zones>
+        <zone idref="300" />
+      </zones>
+    </tranport-edge>
+  </tranport-edges>
+</export>

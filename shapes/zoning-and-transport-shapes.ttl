@@ -1,0 +1,134 @@
+@base <https://lod.opentransportdata.swiss/profile/nova/node-shape/> .
+
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix gtfs: <http://vocab.gtfs.org/terms#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix otd: <https://lod.opentransportdata.swiss/vocab/> .
+
+<ZoneShape> a sh:NodeShape ;
+    sh:targetClass otd:Zone ;
+    rdfs:label "Zone" ;
+    sh:closed true ;
+    skos:example <https://lod.opentransportdata.swiss/zone/zvv/zvv-abo-amp-billett/110> ;
+    sh:property
+        <ZoneShape/label> ,
+        <ZoneShape/zoningPlan> ,
+        <ZoneShape/type> ,
+        <ZoneShape/identifier> .
+
+<ZoneShape/label> a sh:PropertyShape ;
+   sh:path rdfs:label ;
+   sh:datatype xsd:string ;
+   sh:maxCount 1 ;
+   sh:minCount 0 .
+
+<ZoneShape/zoningPlan> a sh:PropertyShape ;
+   sh:path otd:zoningPlan ;
+   sh:class otd:ZoningPlan ;
+   sh:maxCount 1 ;
+   sh:minCount 1 .
+
+<ZoneShape/type> a sh:PropertyShape ;
+   sh:path rdf:type ;
+   sh:hasValue otd:Zone .
+
+<ZoneShape/identifier> a sh:PropertyShape ;
+   sh:path schema:identifier ;
+   sh:datatype xsd:integer ;
+   sh:maxCount 1 ;
+   sh:minCount 1 .
+
+<AllianceShape> a sh:NodeShape ;
+   sh:targetClass otd:Alliance ;
+   rdfs:label "Alliance" ;
+   sh:closed true ;
+   skos:example <https://lod.opentransportdata.swiss/alliance/libero> ;
+   sh:property
+        <AllianceShape/label> ,
+        <AllianceShape/type> .
+
+<AllianceShape/label> a sh:PropertyShape ;
+   sh:path rdfs:label ;
+   sh:datatype xsd:string ;
+   sh:maxCount 1 ;
+   sh:minCount 1 .
+
+<AllianceShape/type> a sh:PropertyShape ;
+   sh:path rdf:type ;
+   sh:hasValue otd:Alliance .
+
+<TransportEdgeShape> a sh:NodeShape ;
+   sh:targetClass otd:TransportEdge ;
+   rdfs:label "TransportEdge" ;
+   sh:closed true ;
+   skos:example <https://lod.opentransportdata.swiss/transportedge/8503006/8503400/sbb/bahn/regular> ;
+   sh:property
+        <TransportEdgeShape/meanOfTransport> ,
+        <TransportEdgeShape/stop> ,
+        <TransportEdgeShape/type> ,
+        <TransportEdgeShape/zone> .
+
+<TransportEdgeShape/meanOfTransport> a sh:PropertyShape ;
+   sh:path otd:meanOfTransport ;
+   sh:datatype xsd:string ;
+   sh:maxCount 1 ;
+   sh:minCount 0 .
+
+<TransportEdgeShape/stop> a sh:PropertyShape ;
+   sh:path gtfs:stop ;
+   sh:nodeKind sh:IRI ;
+   # sh:class gtfs:Station ;
+   sh:maxCount 2 ;
+   sh:minCount 2 .
+
+<TransportEdgeShape/type> a sh:PropertyShape ;
+   sh:path rdf:type ;
+   sh:hasValue otd:TransportEdge .
+
+<TransportEdgeShape/zone> a sh:PropertyShape ;
+   sh:path otd:zone ;
+   sh:class otd:Zone ;
+   sh:minCount 0 .
+
+<ZoningPlanShape> a sh:NodeShape ;
+   sh:targetClass otd:ZoningPlan ;
+   rdfs:label "ZoningPlan" ;
+   sh:closed true ;
+   skos:example <https://lod.opentransportdata.swiss/zoningplan/libero/libero-abo-libero> ;
+   sh:property
+        <ZoningPlanShape/alliance> ,
+        <ZoningPlanShape/identifier> ,
+        <ZoningPlanShape/type> ,
+        <ZoningPlanShape/label> ,
+        <ZoningPlanShape/zone> .
+
+<ZoningPlanShape/alliance> a sh:PropertyShape ;
+   sh:path otd:alliance ;
+   sh:class otd:Alliance ;
+   sh:maxCount 1 ;
+   sh:minCount 1 .
+
+<ZoningPlanShape/identifier> a sh:PropertyShape ;
+	sh:path schema:identifier ;
+	sh:datatype xsd:string ;
+	sh:maxCount 1 ;
+	sh:minCount 1 .
+
+<ZoningPlanShape/type> a sh:PropertyShape ;
+   sh:path rdf:type ;
+   sh:hasValue otd:ZoningPlan .
+
+<ZoningPlanShape/label> a sh:PropertyShape ;
+   sh:path rdfs:label ;
+   sh:datatype xsd:string ;
+   sh:maxCount 1 ;
+   sh:minCount 1 .
+
+<ZoningPlanShape/zone> a sh:PropertyShape ;
+   sh:path otd:zone ;
+   sh:class otd:Zone ;
+   sh:minCount 0 .
