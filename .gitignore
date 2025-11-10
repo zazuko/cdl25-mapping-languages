@@ -1,2 +1,4 @@
 bin
 shacl-play-app.log
+db/atlas.duckdb
+db/atlas2.duckdb

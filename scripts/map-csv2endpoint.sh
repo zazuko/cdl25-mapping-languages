@@ -6,5 +6,5 @@ fi
 ./bin/duckdb/duckdb db/atlas2.duckdb < db/sql/load-csv.sql
 
 ./bin/ontop/ontop endpoint \
-  -p db/atlas.properties \
+  -p db/atlas2.properties \
   -m src-gen/mapping-stops.r2rml.ttl
