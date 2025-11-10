@@ -4,8 +4,16 @@ This repository provides hands-on material and the slides for the talk at [Conne
 
 ## Installation
 
+### Clone this respository
+
+```
+git clone git@github.com:zazuko/cdl25-mapping-languages.git
+```
+
 
 ### Visual Studio Code extensions from Marketplace
+
+Install the following extensions from the marketplace:
 
 - [SPARQL Notebook](https://marketplace.visualstudio.com/items?itemName=Zazuko.sparql-notebook) (zazuko.sparql-notebook) 
 - [RDF Sketch](https://marketplace.visualstudio.com/items?itemName=Zazuko.vscode-rdf-sketch) (zazuko.vscode-rdf-sketch)
