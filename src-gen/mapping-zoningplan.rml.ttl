@@ -23,7 +23,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rr:predicateObjectMap [
 		rr:predicate rdfs:label;
 		rr:objectMap [
-			rml:reference "@id"
+			rml:reference "@name"
 		]
 	].
 	

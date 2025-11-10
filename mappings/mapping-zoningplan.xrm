@@ -7,7 +7,7 @@ map Alliance from zoning.alliance {
 		otd.Alliance
 
 	properties
-		rdfs.label from id;
+		rdfs.label from name;
 }
 
 map Zoningplan from zoning.zoningplan {
