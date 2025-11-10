@@ -11,5 +11,4 @@ shacl v \
   > output-validation/validation-result-report-zoning-and-transport.ttl
 
 arq --data output-validation/validation-result-report-zoning-and-transport.ttl \
-  "ASK { [ <http://www.w3.org/ns/shacl#conforms> true ] }" \
-  | grep "Ask =>"
+  "ASK { [ <http://www.w3.org/ns/shacl#conforms> true ] }"

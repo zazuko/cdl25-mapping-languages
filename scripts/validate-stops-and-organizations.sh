@@ -11,5 +11,4 @@ shacl v \
   > output-validation/validation-result-report-stops-and-organizations.ttl
 
 arq --data output-validation/validation-result-report-stops-and-organizations.ttl \
-  "ASK { [ <http://www.w3.org/ns/shacl#conforms> true ] }" \
-  | grep "Ask =>"
+  "ASK { [ <http://www.w3.org/ns/shacl#conforms> true ] }"
