@@ -32,5 +32,6 @@ map Zone from zoning.zone {
 	properties
 		schema.identifier from zoneId with datatype xsd.integer;
 		rdfs.label from name;
-		otd.zoningPlan template zoningplanIri with allianceId zoningplanId;	
+		otd.zoningPlan template zoningplanIri with allianceId zoningplanId;
+		otd.alliance template allianceIri with allianceId;
 }

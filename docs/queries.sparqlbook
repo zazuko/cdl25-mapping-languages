@@ -20,7 +20,7 @@
   {
     "kind": 2,
     "language": "sparql",
-    "value": "# [endpoint=../output/*.ttl]\n\nDESCRIBE\n<https://lod.opentransportdata.swiss/alliance/libero>                                 # alliance\n# <https://lod.opentransportdata.swiss/zoningplan/libero/libero-billett-billett-libero> # zoningplan\n# <https://lod.opentransportdata.swiss/zone/libero/libero-billett-billett-libero/300>   # zone\n\n# <https://lod.opentransportdata.swiss/transportedge/8504229/8504300/sbb/bahn/regular>  # transport-edge;\n\n# <https://lod.opentransportdata.swiss/didok/8504300> # stop\n# <https://lod.opentransportdata.swiss/provider/11>   # organization",
+    "value": "# [endpoint=../output/*.ttl]\n\nDESCRIBE\n# <https://lod.opentransportdata.swiss/alliance/libero>                                 # alliance\n# <https://lod.opentransportdata.swiss/zoningplan/libero/libero-billett-billett-libero> # zoningplan\n<https://lod.opentransportdata.swiss/zone/libero/libero-billett-billett-libero/300>   # zone\n\n# <https://lod.opentransportdata.swiss/transportedge/8504229/8504300/sbb/bahn/regular>  # transport-edge;\n\n# <https://lod.opentransportdata.swiss/didok/8504300> # stop\n# <https://lod.opentransportdata.swiss/provider/11>   # organization",
     "metadata": {}
   },
   {

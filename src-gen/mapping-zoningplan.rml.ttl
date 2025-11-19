@@ -107,5 +107,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		rr:objectMap [
 			rr:template "https://lod.opentransportdata.swiss/zoningplan/{../../@id}/{../@id}"
 		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate otd:alliance;
+		rr:objectMap [
+			rr:template "https://lod.opentransportdata.swiss/alliance/{../../@id}"
+		]
 	].
 	

@@ -15,10 +15,17 @@
     sh:closed true ;
     skos:example <https://lod.opentransportdata.swiss/zone/zvv/zvv-abo-amp-billett/110> ;
     sh:property
+        <ZoneShape/alliance>,
         <ZoneShape/label> ,
         <ZoneShape/zoningPlan> ,
         <ZoneShape/type> ,
         <ZoneShape/identifier> .
+
+<ZoneShape/alliance> a sh:PropertyShape ;
+   sh:path otd:alliance ;
+   sh:class otd:Alliance ;
+   sh:maxCount 1 ;
+   sh:minCount 1 .
 
 <ZoneShape/label> a sh:PropertyShape ;
    sh:path rdfs:label ;
@@ -74,7 +81,7 @@
 
 <TransportEdgeShape/meanOfTransport> a sh:PropertyShape ;
    sh:path otd:meanOfTransport ;
-   sh:datatype xsd:string ;
+   sh:nodeKind sh:IRI ;
    sh:maxCount 1 ;
    sh:minCount 0 .
 

@@ -12,23 +12,25 @@
 
 <https://lod.opentransportdata.swiss/zone/libero/libero-billett-billett-libero/300>
   a otd:Zone;
-  rdfs:label "Biel";
   otd:zoningPlan <https://lod.opentransportdata.swiss/zoningplan/libero/libero-billett-billett-libero>;
-  schema:identifier 300 .
+  schema:identifier 300;
+  otd:alliance <https://lod.opentransportdata.swiss/alliance/libero>;
+  rdfs:label "Biel" .
 
 <https://lod.opentransportdata.swiss/zone/libero/libero-billett-billett-libero/301>
   a otd:Zone;
-  rdfs:label "Agglo Biel";
   otd:zoningPlan <https://lod.opentransportdata.swiss/zoningplan/libero/libero-billett-billett-libero>;
-  schema:identifier 301 .
+  schema:identifier 301;
+  otd:alliance <https://lod.opentransportdata.swiss/alliance/libero>;
+  rdfs:label "Agglo Biel" .
 
 <https://lod.opentransportdata.swiss/zoningplan/libero/libero-billett-billett-libero>
   a otd:ZoningPlan;
+  schema:identifier "libero-billett-billett-libero";
   otd:alliance <https://lod.opentransportdata.swiss/alliance/libero>;
   rdfs:label "Libero (Billett) Billett Libero";
-  schema:identifier "libero-billett-billett-libero";
-  otd:zone <https://lod.opentransportdata.swiss/zone/libero/libero-billett-billett-libero/300>,
-    <https://lod.opentransportdata.swiss/zone/libero/libero-billett-billett-libero/301> .
+  otd:zone <https://lod.opentransportdata.swiss/zone/libero/libero-billett-billett-libero/301>,
+    <https://lod.opentransportdata.swiss/zone/libero/libero-billett-billett-libero/300> .
 
 <https://lod.opentransportdata.swiss/alliance/libero> a otd:Alliance;
   rdfs:label "Libero" .
@@ -37,15 +39,15 @@
   a otd:TransportEdge;
   gtfs:stop <https://lod.opentransportdata.swiss/didok/8504300>, <https://lod.opentransportdata.swiss/didok/8504229>;
   otd:meanOfTransport "bus";
-  otd:zone <https://lod.opentransportdata.swiss/zone/libero/libero-billett-billett-libero/300>,
-    <https://lod.opentransportdata.swiss/zone/libero/libero-billett-billett-libero/301> .
+  otd:zone <https://lod.opentransportdata.swiss/zone/libero/libero-billett-billett-libero/301>,
+    <https://lod.opentransportdata.swiss/zone/libero/libero-billett-billett-libero/300> .
 
 <https://lod.opentransportdata.swiss/transportedge/8504229/8504300/sbb/bahn/regular>
   a otd:TransportEdge;
   gtfs:stop <https://lod.opentransportdata.swiss/didok/8504300>, <https://lod.opentransportdata.swiss/didok/8504229>;
   otd:meanOfTransport "bahn";
-  otd:zone <https://lod.opentransportdata.swiss/zone/libero/libero-billett-billett-libero/300>,
-    <https://lod.opentransportdata.swiss/zone/libero/libero-billett-billett-libero/301> .
+  otd:zone <https://lod.opentransportdata.swiss/zone/libero/libero-billett-billett-libero/301>,
+    <https://lod.opentransportdata.swiss/zone/libero/libero-billett-billett-libero/300> .
 
 <https://lod.opentransportdata.swiss/transportedge/8504300/8504461/asm-bti/bahn/regular>
   a otd:TransportEdge;
