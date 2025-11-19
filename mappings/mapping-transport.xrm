@@ -9,6 +9,6 @@ map TransportEdge from transport.edge {
 	properties
 		gtfs.stop template stopIri with stop1;
 		gtfs.stop template stopIri with stop2;
-		otd.meanOfTransport from meanOfTransport;
+		otd.meanOfTransport template meanOfTransportIri with meanOfTransport;
 		otd.zone parent-map Zone join zoneId with zoneId;
 }

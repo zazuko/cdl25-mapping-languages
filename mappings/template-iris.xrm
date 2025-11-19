@@ -6,3 +6,5 @@ template transportEdgeRegularIri "https://lod.opentransportdata.swiss/transporte
 
 template stopIri "https://lod.opentransportdata.swiss/didok/{0}"
 template providerIri "https://lod.opentransportdata.swiss/provider/{0}"
+
+template meanOfTransportIri "http://example.org/mean-of-transport/{0}"

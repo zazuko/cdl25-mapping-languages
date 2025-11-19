@@ -35,7 +35,7 @@ PREFIX otd: <https://lod.opentransportdata.swiss/vocab/>
 	rr:predicateObjectMap [
 		rr:predicate otd:meanOfTransport;
 		rr:objectMap [
-			rml:reference "@mean-of-transport"
+			rr:template "http://example.org/mean-of-transport/{@mean-of-transport}"
 		]
 	];
 	
