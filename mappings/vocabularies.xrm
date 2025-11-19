@@ -73,6 +73,7 @@ vocabulary otd {
 	classes
 		Alliance
 		TransportEdge
+		BusTransportEdge
 		Zone
 		ZoningPlan
 

@@ -12,3 +12,10 @@ map TransportEdge from transport.edge {
 		otd.meanOfTransport template meanOfTransportIri with meanOfTransport;
 		otd.zone parent-map Zone join zoneId with zoneId;
 }
+
+map BusTransportEdge from transport.bus_edge {
+	subject template transportEdgeRegularIri with stop1 stop2 operator meanOfTransport;
+
+	types
+		otd.BusTransportEdge
+}

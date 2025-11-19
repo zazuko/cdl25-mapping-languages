@@ -45,6 +45,16 @@ source-group transport {
 			operator "@operator"
 			zoneId "zones/zone/@idref"
 	}
+
+	logical-source bus_edge {
+		iterator "/export/tranport-edges/tranport-edge[@mean-of-transport='bus']"
+
+		referenceables
+			stop1 "@stop1"
+			stop2 "@stop2"
+			meanOfTransport "@mean-of-transport"
+			operator "@operator"
+	}
 }
 
 source-group stops {

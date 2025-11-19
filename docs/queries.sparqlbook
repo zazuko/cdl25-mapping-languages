@@ -46,5 +46,17 @@
     "language": "sparql",
     "value": "# [endpoint=../output/*.ttl]\n\nPREFIX gtfs: <http://vocab.gtfs.org/terms#>\nPREFIX otd: <https://lod.opentransportdata.swiss/vocab/>\nPREFIX schema: <http://schema.org/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT\n  (sample(?stop2Label) as ?stopLabel)\n  (sample(?stop2) as ?stop)\n  (group_concat(distinct str(?meanOfTransport); separator=\",\") as ?meansOfTransport)\n  (group_concat(distinct str(?zoneId); separator=\",\") as ?zones)\n\nWHERE {\n\n  ?stop1 ^gtfs:stop ?edge.\n  ?stop2 ^gtfs:stop ?edge.\n  FILTER (?stop1 != ?stop2)\n\n  ?stop2 rdfs:label ?stop2Label .\n   \n  OPTIONAL {\n    ?edge otd:meanOfTransport ?meanOfTransport.\n  }\n\n  OPTIONAL {\n    ?edge otd:zone/schema:identifier ?zoneId.\n  }\n\n\tVALUES ?stop1 {\n   \t<https://lod.opentransportdata.swiss/didok/8504300>    # stop `Biel/Bienne`\n\t}\n}\nGROUP BY ?stop2Label\nORDER BY ?stop2Label ?meanOfTransport",
     "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "Only edges of type bus",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "# [endpoint=../output/*.ttl]\n\nPREFIX otd: <https://lod.opentransportdata.swiss/vocab/>\n\nSELECT ?s WHERE {\n    ?s a otd:BusTransportEdge.\n}",
+    "metadata": {}
   }
 ]

@@ -50,3 +50,17 @@ PREFIX otd: <https://lod.opentransportdata.swiss/vocab/>
 		]
 	].
 	
+<#BusTransportEdge>
+	a rr:TriplesMap;
+	
+	rml:logicalSource [
+		rml:source "zoning-and-transport.xml";
+		rml:referenceFormulation ql:XPath;
+		rml:iterator "/export/tranport-edges/tranport-edge[@mean-of-transport='bus']"
+	];
+	
+	rr:subjectMap [
+		rr:template "https://lod.opentransportdata.swiss/transportedge/{@stop1}/{@stop2}/{@operator}/{@mean-of-transport}/regular";
+		rr:class otd:BusTransportEdge
+	].
+	
