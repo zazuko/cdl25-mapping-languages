@@ -22,6 +22,8 @@ map Stop from stops.stops {
 		wgs.long from wgs84East with datatype xsd.float;
 		schema.elevation from height with datatype xsd.float;
 
+		// in the original/real pipeline, the following properties are post-processed
+		// because they are temporary to the pipeline, these properties are not part of the SHACL shapes
 		example.pptf_stop_abbreviation from abbreviation;
 		example.pptf_stop_isoCountryCode from isoCountryCode;
 		example.pptf_stop_longLatAsPoint template "POINT({0} {1})" with wgs84East wgs84North as Literal;

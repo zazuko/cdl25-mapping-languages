@@ -95,7 +95,7 @@ docker run --rm -it -v $(pwd):/app zazukoians/node-java-jena:v6 ./scripts/valida
 
 -----
 
-To convert CSV input to Turtle output, run:
+To transform CSV input to Turtle output, run:
 
 ```sh
 ./scripts/map-csv2ttl.sh
@@ -140,3 +140,8 @@ To generate documentation of the datamodel from the SHACL shapes, run:
 - Input shapes: `shapes/stops-and-organizations-shapes.ttl` and `shapes/zoning-and-transport-shapes.ttl`
 - Processing: SHACL Play!
 - Output HTML: `docs/datamodel.html`
+
+
+## Activities & Exercises
+
+See [exercises](./exercises.md)
